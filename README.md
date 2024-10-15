@@ -13,9 +13,12 @@
 
 **`Advanced Input Method :`**
 
+./pythagoras <input option> <1st_input_value> <2nd_input_value>
+
 <p align="center">
   <img src="Method_1.png">
 </p>
+
 
 
 
