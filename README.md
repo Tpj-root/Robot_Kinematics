@@ -3,11 +3,19 @@
 
 
 
+**`Simple Input Method :`**
+
+<p align="center">
+  <img src="Method_0.png">
+</p>
 
 
 
+**`Advanced Input Method :`**
 
-
+<p align="center">
+  <img src="Method_1.png">
+</p>
 
 
 
