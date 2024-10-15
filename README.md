@@ -3,6 +3,16 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
 ### you need to link the math library explicitly by adding the -lm flag when compiling your program
 
 gcc pythagoras.c -o pythagoras -lm
@@ -120,5 +130,69 @@ Main Function:
     Outputs the new Cartesian coordinates and their Polar representation.
     
     
+
+
+
+
+###  How to add a new function to the code
+
+
+
+First create the function
+
+
+// calculate_triangle_angles_degrees
+struct Angles {
+    double angleA;
+    double angleB;
+    double angleC;
+};
+
+struct Angles calculate_triangle_angles(double a, double b) {
+    struct Angles angles;
     
+    angles.angleA = atan(b / a) * (180.0 / M_PI); // Angle opposite side a
+    angles.angleB = atan(a / b) * (180.0 / M_PI); // Angle opposite side b
+    angles.angleC = 90.0; // Right angle
+
+    return angles;  // Return the struct
+}
+
+
+
+then edit your choice
+
+```
+printf("Enter your choice (0, 1, 2 or 3): ");
+```
+
+
+then add your case ??
+
+```
+            case 3:
+                // Find adjacent side
+                printf("Enter the lengths of the sides a : ");
+                scanf("%lf", &a);
+                printf("Enter the lengths of the sides b : ");
+                scanf("%lf", &b);
+                struct Angles angles = calculate_triangle_angles(a, b);
+                printf("Angle A: %lf degrees\n", angles.angleA);
+                printf("Angle B: %lf degrees\n", angles.angleB);
+                printf("Angle C: %lf degrees\n", angles.angleC);
+                break;
+```
+
+then, Command-line argument input handling
+
+
+```
+            case 3:
+                // Find adjacent side
+                angles = calculate_triangle_angles(a, b);
+                printf("%lf %lf %lf \n", angles.angleA, angles.angleB, angles.angleC);
+                break;
+
+```
+
 
